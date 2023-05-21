@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'serif';
+}
+
+img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #595D88;
+}
+
+.sortable-liste {
+    background: #fff;
+    width: 445px;
+    border-radius: 6px;
+    padding: 30px 25px 20px;
+}
+
+.sortable-liste .item {
+    list-style: none;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 13px;
+    margin-bottom: 11px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: move;
+}
+
+.item .detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item .detail img {
+    width: 43px;
+    height: 43px;
+    margin-right: 12px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.item .detail span{
+    font-size: 1.13rem;
+}
+
+.item i{
+    color: #474747;
+    font-size: 1.13rem;
+
+}
+
+.item.dragging :where(.detail, i){
+    opacity: 0;
+}
